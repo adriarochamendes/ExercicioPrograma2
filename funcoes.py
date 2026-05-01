@@ -19,3 +19,12 @@ def guardar_dado(dados_rolados, dados_no_estoque, dado_para_guardar):
     del dados_rolados[dado_para_guardar]
 
     return [dados_rolados, dados_no_estoque]
+
+#questao3
+
+def remover_dado(dados_rolados, dados_no_estoque, dado_para_remover):
+    dado = dados_no_estoque[dado_para_remover]
+    dados_rolados.append(dado)
+    del dados_no_estoque[dado_para_remover]
+
+    return [dados_rolados, dados_no_estoque]

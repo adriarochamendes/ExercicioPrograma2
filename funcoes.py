@@ -156,3 +156,16 @@ def calcula_pontos_regra_avancada(dados):
     pontos["sequencia_baixa"] = calcula_pontos_sequencia_baixa(dados)
 
     return pontos
+
+#questao12
+
+def faz_jogada(dados, categoria, cartela_de_pontos):
+    if categoria.isdigit():
+        pontos_simples = calcula_pontos_regra_simples(dados)
+        cartela_de_pontos["regra_simples"][int(categoria)] = pontos_simples[int(categoria)]
+    
+    else:
+        pontos_avancados = calcula_pontos_regra_avancada(dados)
+        cartela_de_pontos["regra_avancada"][categoria] = pontos_avancados[categoria]
+
+    return cartela_de_pontos

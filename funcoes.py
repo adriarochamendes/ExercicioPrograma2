@@ -68,3 +68,15 @@ def calcula_pontos_sequencia_baixa(dados):
         return 15
     
     return 0
+
+#questao7
+
+def calcula_pontos_sequencia_alta(dados):
+    valores = set(dados)
+    
+    if {1, 2, 3, 4, 5}.issubset(valores):
+        return 30
+    if {2, 3, 4, 5, 6}.issubset(valores):
+        return 30
+    
+    return 0

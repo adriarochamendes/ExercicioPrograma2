@@ -126,3 +126,20 @@ def calcula_pontos_quadra(dados):
 
     return 0
 
+#questao10
+
+def calcula_pontos_quina(dados):
+    contagem = {}
+
+    for dado in dados:
+        if dado in contagem:
+            contagem[dado] += 1
+        else:
+            contagem[dado] = 1
+
+    for valor in contagem.values():
+        if valor >= 5:
+            return 50
+
+    return 0
+
